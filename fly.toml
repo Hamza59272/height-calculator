@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for marketplace-be on 2025-03-23T09:49:38Z
+# fly.toml app configuration file generated for text-height-calculator on 2025-03-23T19:28:52Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'marketplace-be'
+app = 'text-height-calculator'
 primary_region = 'sin'
 
 [build]
