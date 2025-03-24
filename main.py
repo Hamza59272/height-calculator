@@ -6,8 +6,19 @@ from io import BytesIO
 import logging
 from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextBox, LTTextLine, LTChar
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://38.242.137.214:8888/"],  # Allow frontend
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 def extract_image_or_text(file_bytes: bytes, content_type: str):
     """
